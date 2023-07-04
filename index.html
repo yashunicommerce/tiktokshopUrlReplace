@@ -23,7 +23,7 @@
 	    	console.log(code);
 	    	console.log(redirect_uri);
 	    	console.log(queryString);
-	    	window.location.replace=redirect_uri+'?authCode='+code;
+	    	window.location.replace='?code='+code+'&state='+redirect_uri;
 		};
 			
 	</script>
