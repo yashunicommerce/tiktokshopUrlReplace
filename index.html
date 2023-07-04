@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>
+		Unicommerce <> TikTok Shop OAuth
+	</title>
+</head>
+
+<body>
+	<h1 style="color:blue;">
+		Unicommerce
+	</h1>
+	
+	<p>Redirecting...</p>
+	
+	<script>
+		window.onload = function() {
+		const queryString = window.location.search;
+	     	const urlParams = new URLSearchParams(queryString);
+	    	const redirect_uri = urlParams.get('state')
+		const code = urlParams.get('code')
+	    	console.log(code);
+	    	console.log(redirect_uri);
+	    	console.log(queryString);
+	    	window.location.replace=redirect_uri+'?authCode='+code;
+		};
+			
+	</script>
+</body>
+
+</html>
+	
